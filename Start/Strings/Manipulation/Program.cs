@@ -7,26 +7,32 @@ string str3 = "THIS is a STRING";
 string[] strs = {"one", "two", "three", "four"};
 
 // TODO: Length of a string 
+Console.WriteLine(str1.Length);
 
 
 // TODO: Access individual characters
-
+Console.WriteLine(str2[5]);
 
 // TODO: Iterate over a string like any other sequence of values
-
+foreach(char ch in str3)
+{
+    Console.WriteLine(ch);
+}
 
 // TODO: String Concatenation         
-string outstr;
+string outstr=string.Concat(str1,str2);
+Console.WriteLine(outstr);
 
 
 // TODO: Joining strings together with Join
-
+outstr = string.Join(",", strs);
+Console.WriteLine(outstr);
 
 // TODO: String Comparison
-
+Console.WriteLine(str1.CompareTo(str2));
 // Equals just returns a regular Boolean
-// bool isEqual = str2.Equals(str3);
-// Console.WriteLine($"{isEqual}");
+ bool isEqual = str2.Equals(str3);
+ Console.WriteLine($"{isEqual}");
 
 // Compare will perform an ordinal comparison and return:
 // < 0 : first string comes before second in sort order
@@ -35,3 +41,4 @@ string outstr;
 
 
 // TODO: Replacing content
+Console.WriteLine(str1.Replace("fox","cat"));
